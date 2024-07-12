@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="asts/Favicon(Eudora).Icone.jpeg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.css/dist/css/autoComplete.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <title>Representante Eudora</title>
+</head>
+<body>
+  <div class="d-flex flex-column wrapper min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Espaço vazio para manter o alinhamento -->
+          </ul>
+          <div class="d-flex">
+            <input type="text" id="searchInput" placeholder="O que vc procura?...">
+            <div id="autocomplete-results"></div>
+            <button class="btn btn-link text-white">
+              <i class="bi bi-search" style="font-size: 1rem;"></i> 
+            </button>              
+            <div class="nav-item">
+              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                    title="5 produto(s) no carrinho"><small>5</small></span>
+              <a href="Carrinho.HTML" class="nav-link text-white">
+                  <i class="bi bi-cart" style="font-size:24px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="menu-overlay"></div>
+    <a href="#" class="menu-open">Menu</a>
+    <div class="side-menu-wrapper">
+      <a href="#" class="menu-close">×</a>
+      <img src="./asts/Logotipo.jpg" alt="Logotipo">
+      <ul>
+        <li><a href="index.html" target="_blank" rel="nofollow">Inicio</a></li>
+        <li><a href="https://www.eudora.com.br/atendimento-online" target="_blank" rel="nofollow">Dúvida mais Frequentes</a></li>
+        <li><a href="Segundo.HTML" target="_blank" rel="nofollow">Promoção</a></li>
+        <li><a href="Terceiro.HTML" target="_blank" rel="nofollow">Material</a></li>
+        <li><a href="Quarto.HTML" target="_blank" rel="nofollow">Video do conteúdo + Mapa + Localização</a></li>
+        <li><a href="Politica de privacidade.HTML" target="_blank" rel="nofollow">Politica de privacidade</a></li>
+        <li><a href="Termos de uso.HTML" target="_blank" rel="nofollow">Termos de uso</a></li>
+        <li><a href="Proteja-se contra fraudes.HTML" target="_blank" rel="nofollow">Proteja-se contra fraudes</a></li>
+        <li><a href="contato.html" target="_blank" rel="nofollow">Contato</a></li>
+      </ul>
+    </div>
+    <header class="header">
+      <div class="overlay">
+        <h1 class="company-name">Representante Eudora</h1>
+      </div>
+    </header>
+    <main class="flex-fill">
+        <div class="container text-center">
+            <h1>Obrigado!</h1>
+            <hr>
+            <h3>Anote o número do seu Pedido:</h3>
+            <h2 class="text-danger"><b>123456</b></h2>
+            <p>Em até 4 dias uteis, o seu pedido esta chegando em sua casa. Qualquer dúvida, entre em contato conosco e informe o número do seu cadastro para que possamos te ajudar</p>
+            <p>Tenha um ótimo dia!</p>
+            <p>
+                Atenciosamente,<br>
+                Equipe Representante Eudora
+            </p>
+            <p>
+                <a href="/index.html" class="btn btn-danger btn-lg">Voltar à Página Principal</a>
+            </p>
+        </div>
+    </main>
+    <footer class="footer bg-dark text-white mt-auto">
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-12 col-md-4 text-center">
+              © 2024 - Representante Eudora<br>
+              Av. Barão de Itapura, 1080 - Vila Itapura, Campinas - SP, 13020-431 <br>
+              CPNJ 00.000.000/0000-00
+            </div>
+            <div class="col-12 col-md-4 text-center">
+              E-mail: <a href="mailto:sandramarucci4@gmail.com" class="text-decoration-none text-white">sandramarucci4@gmail.com</a><br>
+              Telefone: <a href="tel:28999990000" class="text-decoration-none text-white">(19) 981473594</a>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+              Desenvolvido por Ana Clara Marucci
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Script.JS"></script>
+    <script src="./node_modules/autoComplete/autoComplete.min.js"></script>
+  </body>
+  </html>
+  

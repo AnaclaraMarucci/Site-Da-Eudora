@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="asts/Favicon(Eudora).Icone.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <title>Fechamento de Compras</title>
+</head>
+<body>
+  <div class="d-flex flex-column wrapper min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Espaço vazio para manter o alinhamento -->
+          </ul>
+          <div class="d-flex">
+            <input type="text" id="searchInput" placeholder="O que vc procura?...">
+            <div id="autocomplete-results"></div>
+            <button class="btn btn-link text-white">
+              <i class="bi bi-search" style="font-size: 1rem;"></i> 
+            </button>              
+            <div class="nav-item">
+              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                    title="5 produto(s) no carrinho"><small>5</small></span>
+              <a href="/carrinho.html" class="nav-link text-white">
+                  <i class="bi bi-cart" style="font-size:24px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="menu-overlay"></div>
+    <a href="#" class="menu-open">Menu</a>
+    <div class="side-menu-wrapper">
+      <a href="#" class="menu-close">×</a>
+      <div class="menu-item left"><img src="asts/Logotipo.jpg" width="89px"></div>
+      <ul>
+        <li><a href="index.html" target="_blank" rel="nofollow">Inicio</a></li>
+        <li><a href="https://www.eudora.com.br/atendimento-online" target="_blank" rel="nofollow">Dúvida mais Frequentes</a></li>
+        <li><a href="Segundo.HTML" target="_blank" rel="nofollow">Promoção</a></li>
+        <li><a href="Terceiro.HTML" target="_blank" rel="nofollow">Material</a></li>
+        <li><a href="Quarto.HTML" target="_blank" rel="nofollow">Video do conteúdo + Mapa + Localização</a></li>
+        <li><a href="Politica de privacidade.HTML" target="_blank" rel="nofollow">Politica de privacidade</a></li>
+        <li><a href="Termos de uso.HTML" target="_blank" rel="nofollow">Termos de uso</a></li>
+        <li><a href="Proteja-se contra fraudes.HTML" target="_blank" rel="nofollow">Proteja-se contra fraudes</a></li>
+        <li><a href="contato.html" target="_blank" rel="nofollow">Contato</a></li>
+      </ul>
+    </div>
+    <header class="header">
+      <div class="overlay">
+        <h1 class="company-name">Representante Eudora</h1>
+      </div>
+    </header>
+    
+    <main class="flex-fill">
+      <div class="container">
+        <h1>Selecione o Endereço de Entrega</h1>
+        <h3 class="mb-4">
+            Selecione o endereço de entrega e clique em <b>Continuar</b> para prosseguir para a <b>seleção da
+                forma de pagamento</b>.
+        </h3>
+        <div class="d-flex justify-content-around flex-wrap border rounded-top pt-4 px-3">
+            <div class="mb-4 mx-2 flex-even">
+                <input type="radio" class="btn-check" name="endereco" 
+                    autocomplete="off" id="end1">
+                <label class="btn btn-outline-black p-4 h-100 w-100" for="end1">
+                    <h3>
+                        <b class="text-dark">Minha Casa</b><br>
+                        <hr>
+                        <b>Ana Clara Marucci</b><br>
+                        Rua das Flores, 123<br>
+                        Jardim Primavera, São Paulo, SP<br>
+                        CEP: 01001-000
+                    </h3>
+                </label>
+            </div>
+            <div class="mb-4 mx-2 flex-even">
+                <input type="radio" class="btn-check" name="endereco" 
+                    autocomplete="off" id="end2">
+                <label class="btn btn-outline-black p-4 h-100 w-100" for="end2">
+                    <h3>
+                        <b class="text-dark">Meu Trabalho</b><br>
+                        <hr>
+                        <b>Ana Clara Marucci</b><br>
+                        Rua da Arte, 1213<br>
+                        Porto Alegre, RS<br>
+                        CEP: 90000-000
+                    </h3>
+                </label>
+            </div>
+            <div class="mb-4 mx-2 flex-even">
+                <input type="radio" class="btn-check" name="endereco" 
+                    autocomplete="off" id="end3">
+                <label class="btn btn-outline-black p-4 h-100 w-100" for="end3">
+                    <h3>
+                        <b class="text-dark">Casa de Praia</b><br>
+                        <hr>
+                        <b>Ana Clara Marucci</b><br>
+                        Rua do Mar, 303<br>
+                        Ubatuba, SP<br>
+                        CEP: 11680-000
+                    </h3>
+                </label>
+            </div>
+        </div>
+        <div class="text-end border border-top-0 rounded-bottom p-4 pb-0">                    
+            <a href="fechamentoitens.HTML" class="btn btn-outline-success btn-lg mb-4">
+                Voltar aos Itens
+            </a>
+            <a href="Fechamentopagamento.HTML" class="btn btn-danger btn-lg ms-2 mb-4">Continuar</a>
+        </div>
+    </div>
+  </main>
+  <footer class="footer bg-dark text-white mt-auto">
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-12 col-md-4 text-center">
+          © 2024 - Representante Eudora<br>
+          Av. Barão de Itapura, 1080 - Vila Itapura, Campinas - SP, 13020-431 <br>
+          CPNJ 00.000.000/0000-00
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          E-mail: <a href="mailto:sandramarucci4@gmail.com" class="text-decoration-none text-white">sandramarucci4@gmail.com</a><br>
+          Telefone: <a href="tel:28999990000" class="text-decoration-none text-white">(19) 981473594</a>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          Desenvolvido por Ana Clara Marucci
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Script.JS"></script>
+<script src="./node_modules/autoComplete/autoComplete.min.js"></script>
+</body>
+</html>

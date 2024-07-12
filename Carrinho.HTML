@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="asts/Favicon(Eudora).Icone.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <title>Carrinho de Compras</title>
+</head>
+<body>
+  <div class="d-flex flex-column wrapper min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Espaço vazio para manter o alinhamento -->
+          </ul>
+          <div class="d-flex">
+            <input type="text" id="searchInput" placeholder="O que vc procura?...">
+            <div id="autocomplete-results"></div>
+            <button class="btn btn-link text-white">
+              <i class="bi bi-search" style="font-size: 1rem;"></i> 
+            </button>              
+            <div class="nav-item">
+              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                    title="5 produto(s) no carrinho"><small>5</small></span>
+              <a href="/carrinho.html" class="nav-link text-white">
+                  <i class="bi bi-cart" style="font-size:24px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="menu-overlay"></div>
+    <a href="#" class="menu-open">Menu</a>
+    <div class="side-menu-wrapper">
+      <a href="#" class="menu-close">×</a>
+      <div class="menu-item left"><img src="asts/Logotipo.jpg" width="89px"></div>
+      <ul>
+        <li><a href="index.html" target="_blank" rel="nofollow">Inicio</a></li>
+        <li><a href="https://www.eudora.com.br/atendimento-online" target="_blank" rel="nofollow">Dúvida mais Frequentes</a></li>
+        <li><a href="Segundo.HTML" target="_blank" rel="nofollow">Promoção</a></li>
+        <li><a href="Terceiro.HTML" target="_blank" rel="nofollow">Material</a></li>
+        <li><a href="Quarto.HTML" target="_blank" rel="nofollow">Video do conteúdo + Mapa + Localização</a></li>
+        <li><a href="Politica de privacidade.HTML" target="_blank" rel="nofollow">Politica de privacidade</a></li>
+        <li><a href="Termos de uso.HTML" target="_blank" rel="nofollow">Termos de uso</a></li>
+        <li><a href="Proteja-se contra fraudes.HTML" target="_blank" rel="nofollow">Proteja-se contra fraudes</a></li>
+        <li><a href="contato.html" target="_blank" rel="nofollow">Contato</a></li>
+      </ul>
+    </div>
+    <header class="header">
+      <div class="overlay">
+        <h1 class="company-name">Representante Eudora</h1>
+      </div>
+    </header>
+    
+    <main class="flex-fill">
+      <div class="container">
+        <h1>Carrinho de Compras</h1>
+        <ul class="list-group mb-3">
+          <li class="list-group-item py-3">
+            <div class="row g-3">
+              <div class="col-4 col-md-3 col-lg-2">
+                <a href="#">
+                  <img src="asts/1 Imagems de Produtos para compra.webp" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="col-8 col-md-9 col-lg-7 align-self-center">
+                <h4>
+                  <b><a href="#" class="text-decoration-none text-black">Combo Cauterização dos lisos: Shampoo cachos e crespos 250ml + Condicionador cachos e crespos 200ml + Ativador de cachos 100ml + Creme para Pentear cachos e crespos 450g</a></b>
+                </h4>
+                <h5>
+                  A melhor qualidade para seus cabelos lisos!
+                  Experimente a linha Siage Cauterização dos Lisos e renove seus cabelos com a qualidade e tecnologia que você merece!
+                  Aproveite esta oportunidade e adquira já o seu Kit Siage Cauterização dos Lisos!
+                  Sua beleza merece o melhor!
+                </h5>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3 align-self-center text-end">
+                <div class="input-group">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <input type="text" class="form-control text-center border-dark" value="4">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                    <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                </div>
+                <div class="text-end mt-2">
+                  <span class="text-dark">Valor Item: R$53,99</span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item py-3">
+            <div class="row g-3">
+              <div class="col-4 col-md-3 col-lg-2">
+                <a href="#">
+                  <img src="asts/2 Imagem de Produtos para compra.webp" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="col-8 col-md-9 col-lg-7 align-self-center">
+                <h4>
+                  <b><a href="#" class="text-decoration-none text-black">Combo retrô: Desodorante colônia 95ml + Loção hidratante desodorante corporal 200ml</a></b>
+                </h4>
+                <h5>
+                  A fragrância que realça sua beleza!
+                 Experimente o kit Chic Retrô da Eudora e sinta a elegância e o charme que você merece!
+                 Aproveite esta oportunidade e adquira já o seu Kit Chic Retrô!
+                 Sua beleza merece o melhor!
+                </h5>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3 align-self-center text-end">
+                <div class="input-group">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <input type="text" class="form-control text-center border-dark" value="4">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                    <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                </div>
+                <div class="text-end mt-2">
+                  <span class="text-dark">Valor Item: R$149,89</span>
+                </div>
+              </div>
+            </div>
+          </li><li class="list-group-item py-3">
+            <div class="row g-3">
+              <div class="col-4 col-md-3 col-lg-2">
+                <a href="#">
+                  <img src="asts/3 Imagem de Produto para compra.webp" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="col-8 col-md-9 col-lg-7 align-self-center">
+                <h4>
+                  <b><a href="#" class="text-decoration-none text-black">Combo maquiagem para os olhos: mascara soul 7.0 + lapiseira retrátil para olhos</a></b>
+                </h4>
+                <h5>
+                  Olhos de diva, com um toque de sofisticação!
+                Experimente o kit Soul Kiss da Eudora e realce sua beleza com um olhar marcante e irresistível!
+                Aproveite esta oportunidade e adquira já o seu Kit Soul Kiss!
+                Sua beleza merece o melhor!
+                </h5>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3 align-self-center text-end">
+                <div class="input-group">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <input type="text" class="form-control text-center border-dark" value="4">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                    <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                </div>
+                <div class="text-end mt-2">
+                  <small class="text-secondary">Valor antigo R$75,98 </small><br>
+                  <span class="text-dark">Valor Item: R$49,99 3x de R$16,66</span>
+                </div>
+              </div>
+            </div>
+          </li><li class="list-group-item py-3">
+            <div class="row g-3">
+              <div class="col-4 col-md-3 col-lg-2">
+                <a href="#">
+                  <img src="asts/4 Imagem de Produtos para Compra.webp" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="col-8 col-md-9 col-lg-7 align-self-center">
+                <h4>
+                  <b><a href="#" class="text-decoration-none text-black">Combo instancia Ameixa e Praliné: (5 itens): Creme perfumado para as mãos 30g + Spray Perfumado desodorante colônia 200ml + Creme hidratante desodorante corporal + fondue hidratante desodorante corporal 180ml e sabonete vegetal corporal em barra</a></b>
+                </h4>
+                <h5>
+                  Hidratação e perfumação que você merece!
+                Experimente o kit Intense da Eudora e sinta-se renovada com a fragrância que te envolve e a maciez que sua pele precisa.
+                Aproveite esta oportunidade e adquira já o seu Kit Intense!
+                Sua beleza merece o melhor!
+                </h5>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3 align-self-center text-end">
+                <div class="input-group">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <input type="text" class="form-control text-center border-dark" value="4">
+                  <button class="btn btn-outline-dark btn-sm" type="button">
+                    <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                  <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                    <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                  </button>
+                </div>
+                <div class="text-end mt-2">
+                  <small class="text-secondary">Valor antigo R$199,95 </small><br>
+                  <span class="text-dark">Valor Item: R$161,95 10x de R$16,20</span>
+                </div>
+              </div>
+              <li class="list-group-item py-3">
+                <div class="text-end">
+                    <h4 class="text-dark mb-3">
+                        Valor Total: R$ 236,74
+                    </h4>
+                    <a href="index.html" class="btn btn-outline-success btn-lg">
+                        Continuar Comprando                            
+                    </a>
+                    <a href="fechamentoitens.html" class="btn btn-danger btn-lg ms-2 mt-xs-3">Fechar Compra</a>
+                  </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main> 
+    <footer class="footer bg-dark text-white mt-auto">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-12 col-md-4 text-center">
+            © 2024 - Representante Eudora<br>
+            Av. Barão de Itapura, 1080 - Vila Itapura, Campinas - SP, 13020-431 <br>
+            CPNJ 00.000.000/0000-00
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            E-mail: <a href="mailto:sandramarucci4@gmail.com" class="text-decoration-none text-white">sandramarucci4@gmail.com</a><br>
+            Telefone: <a href="tel:28999990000" class="text-decoration-none text-white">(19) 981473594</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            Desenvolvido por Ana Clara Marucci
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- Popper.js first, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw
+  <script type="text/javascript" src="Script.JS"></script>
+  <script src="node_modules/autoComplete.js/dist/autoComplete.min.js"></script>
+</body>
+</html>

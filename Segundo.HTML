@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="asts/Favicon(Eudora).Icone.jpeg">
+  <link rel="stylesheet" href="Styles.CSS">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <title> Promoção</title>
+</head>
+<style>
+  .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 400px;
+  max-height: 400%;
+  }
+</style>
+<body>
+  <div class="d-flex flex-column wrapper min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+      <div class="container">
+        <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
+        <button class="navbar-toggler" type="button" onclick="toggleMenu()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Espaço vazio para manter o alinhamento -->
+          </ul>
+          <div class="d-flex">
+            <input type="text" id="searchInput" placeholder="O que vc procura?.">
+            <div id="autocomplete-results"></div>
+            <button class="btn btn-link text-white">
+              <i class="bi bi-search" style="font-size: 1rem;"></i> 
+            </button>              
+            <div class="nav-item">
+              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                  title="5 produto(s) no carrinho"><small>5</small></span>
+              <a href="/carrinho.html" class="nav-link text-white">
+                  <i class="bi bi-cart" style="font-size:24px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+    <a href="#" class="menu-open">Menu</a>
+    <div class="side-menu-wrapper">
+      <a href="#" class="menu-close">×</a>
+      <div class="menu-item left"><img src="asts/Logotipo.jpg" width="89px"></div>
+      <ul>
+        <li><a href="index.html" target="_blank" rel="nofollow">Inicio</a></li>
+        <li><a href="https://www.eudora.com.br/atendimento-online" target="_blank" rel="nofollow">Dúvida mais Frequentes</a></li>
+        <li><a href="Segundo.HTML" target="_blank" rel="nofollow">Promoção</a></li>
+        <li><a href="Terceiro.HTML" target="_blank" rel="nofollow">Material</a></li>
+        <li><a href="Quarto.HTML" target="_blank" rel="nofollow">Video do conteúdo + Mapa + Localização</a></li>
+        <li><a href="Politica de privacidade.HTML" target="_blank" rel="nofollow">Politica de privacidade</a></li>
+        <li><a href="Termos de uso.HTML" target="_blank" rel="nofollow">Termos de uso</a></li>
+        <li><a href="Proteja-se contra fraudes.HTML" target="_blank" rel="nofollow">Proteja-se contra fraudes</a></li>
+        <li><a href="contato.html" target="_blank" rel="nofollow">Contato</a></li>
+      </ul>
+    </div>
+    <header class="header">
+      <div class="overlay">
+        <h1 class="company-name">Representante Eudora</h1>
+      </div>
+    </header>
+      <audio src="asts/Audio de musica Intrumental.mp3" controls>Som</audio>
+        <p class="highlight">Fique ligado temos algumas promoções para vocês:</p>
+        <main class="flex-fill">
+            <div class="container-fluid">
+              <div class="row g-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção 1 (2).webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>De R$137,97</del>
+                            <p>por</p>
+                            <p>R$125,65 8x de R$15,75</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Combo combate o Frizz: Shampoo 250ml + Condicionador 200ml + Leave In 100ml</h5>
+                            <p class="card-text">Combata o frizz com a linha Siage e diga adeus aos cabelos arrepiados!</p>
+                            <p>Experimente o Shampoo, Condicionador e Creme de Pentear Defrizante Siage e deixe seus cabelos lisos e disciplinados por até 72 horas</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu Kit Siage Combate o Frizz!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Em estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção2.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>De R$92,98</del>
+                            <p>por</p>
+                            <p>R$79,96 5x de 15,99</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Combo regeneração pós-química Shampoo 250ml + Condicionador 200ml</h5>
+                            <p class="card-text">Repare os danos causados por químicas com a linha Siage Regeneração Pós Química!</p>
+                            <p>Experimente o Shampoo e Condicionador Siage e repare profundamente seus cabelos com a qualidade e tecnologia que você merece!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu Kit Siage Regeneração Pós Química!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Em estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promação 3.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>R$75,98</del>
+                            <p>por</p>
+                            <p>R$49,99 3x de R$16,66</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Chic: Colônia Desodorante Chérie 95ml</h5>
+                            <p class="card-text">Desperte sua elegância com um toque de sofisticação!</p>
+                            <p>Experimente o perfume Chic Cherie da Eudora e realce sua beleza com uma fragrância marcante e irresistível!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu perfume Chic Cherie!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Em estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção 4.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>R$199,95</del>
+                            <p>por</p>
+                            <p>R$161,95 10x de R$16,20</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Club 6: Desodorante Colônia 96ml</h5>
+                            <p class="card-text">Experimente o perfume Club 6 da Eudora e realce sua beleza com uma fragrância marcante e irresistível!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu perfume Club 6!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Em estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção 5.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>De R$100,97</del>
+                            <p>por</p>
+                            <p>R$94,97 6x de R$15,83</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Combo Soul: Lapiseira Retrátil 350mg + Delineador Líquido Preto 2,5ml + Lápis para sobrancelha Médio Escuro 1,1g</h5>
+                            <p class="card-text">Olhos de diva, com um toque de sofisticação!</p>
+                            <p>Experimente o kit Soul Kiss da Eudora e realce sua beleza com um olhar marcante e irresistível!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu Kit Soul Kiss!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Fora de estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção 6.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>De R$101,98</del>
+                            <p>por</p>
+                            <p>R$74,99 5x de R$15,00</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kit Skin Perfection Pó Solto + Primer Matte + Bruma Fixadora</h5>
+                            <p class="card-text">Pele perfeita, radiante e impecável!</p>
+                            <p>Experimente a linha Siage Cauterização dos Lisos e renove seus cabelos com a qualidade e tecnologia que você merece!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu Kit Skin Perfection!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Em estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção 7.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>De R$209,90</del>
+                            <p>por</p>
+                            <p>R$174,90 10x de R$17,49</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Combo Instance Lima Rosa: Loção Corporal 400ml + Gelato Hidratante Desodorante Corporal 200g</h5>
+                            <p class="card-text">Hidratação e fragrância que te levam para um paraíso tropical!</p>
+                            <p>Experimente a linha Instance Lima Rosa da Eudora e sinta a fragrância fresca e deliciosa da fruta, com a hidratação que sua pele precisa!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu Kit Instance Lima Rosa!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Fora de estoque</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="asts/Produto Em Promoção 8.webp" class="card-img-top">
+                        <div class="card-header">
+                            <del>De R$125,97</del>
+                            <p>por</p>
+                            <p>R$120,97 8x de R$15,12</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Combo Gel de Limpeza Neo Dermo 150g + Loção Corporal 150ml + Blush Líquido 15ml</h5>
+                            <p class="card-text">Pele radiante, macia e protegida!</p>
+                            <p>Experimente o Kit Neo Dermo Purific da Eudora e cuide da sua pele com produtos dermatologicamente testados!</p>
+                            <p>Aproveite esta oportunidade e adquira já o seu Kit Neo Dermo Purific!</p>
+                            <p>Sua beleza merece o melhor!</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
+                                Adicionar ao Carrinho
+                            </a>
+                            <small class="text-success">Fora de estoque</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="footer bg-dark text-white mt-auto">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-12 col-md-4 text-center">
+            © 2024 - Representante Eudora<br>
+            Av. Barão de Itapura, 1080 - Vila Itapura, Campinas - SP, 13020-431 <br>
+            CPNJ 00.000.000/0000-00
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            E-mail: <a href="mailto:sandramarucci4@gmail.com" class="text-decoration-none text-white">sandramarucci4@gmail.com</a><br>
+            Telefone: <a href="tel:28999990000" class="text-decoration-none text-white">(19) 981473594</a>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            Desenvolvido por Ana Clara Marucci
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- Popper.js first, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="Script.JS"></script>
+</body>
+</html>
