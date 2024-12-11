@@ -7,41 +7,41 @@
   <link rel="icon" type="image/png" href="asts/Favicon(Eudora).Icone.jpeg">
   <link rel="stylesheet" href="Styles.CSS">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
   <title>Material</title>
 </head>
-<body>
-  <div class="d-flex flex-column wrapper min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
-      <div class="container">
-        <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
-        <button class="navbar-toggler" type="button" onclick="toggleMenu()">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <!-- Espaço vazio para manter o alinhamento -->
-          </ul>
-          <div class="d-flex">
-            <div class="search me-3">
-              <input type="text" placeholder="O que você está...">
-              <div class="list"></div>
-              <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
-            </div>
-            <div class="nav-item">
-              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
-                  title="5 produto(s) no carrinho"><small>5</small></span>
-              <a href="/carrinho.html" class="nav-link text-white">
-                  <i class="bi bi-cart" style="font-size:24px;"></i>
-              </a>
-            </div>
+<div class="d-flex flex-column wrapper min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0"></ul>
+        <div class="d-flex align-items-center ms-auto">
+          <div class="search-container me-2">
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control" placeholder="O que vc Procura?" id="campo-pesquisa">
+              <button class="btn btn-primary" onclick='pesquisar()'>Pesquisar</button> 
+          <div class="nav-item position-relative">
+            <span id="cart-count" class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0" title="produtos no carrinho">
+              <small>0</small>
+            </span>
+            <a href="Carrinho.HTML" class="nav-link text-white">
+              <i class="bi bi-cart" style="font-size:24px;"></i>
+            </a>
           </div>
         </div>
-      </div>
-    </nav>
+      </div>  
+      <ul id="lista-carrinho" class="list-group"></ul>  
+              <div id="total-price" class="mt-3 fw-bold"></div>
+        </ul> 
+    </div>
+  </nav>
+  <main class="flex-fill">
+    <section class="resultados-pesquisa mt-3" id="resultados-pesquisa"></section> 
+  </main>
     <div class="menu-overlay"></div>
     <a href="#" class="menu-open">Menu</a>
     <div class="side-menu-wrapper">
@@ -69,7 +69,7 @@
       <main class="flex-fill">
         <div class="container-fluid">
           <div class="row g-3">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
               <div class="card">
                 <img src="asts/Revista Ciclo 5.jpg"class="card-img-top">
                 <div class="card-body">
@@ -95,50 +95,199 @@
               </div>
             </div>
             <p class="highlight">Alguns  destaque do nosso novo ciclo</p>
-            <p  class="highlight">APROVEITE ESSA PROMOÇÃO E PRESENTEI SUA MÃE</p>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card">
-                <img src="asts/Primeiro Destaque Do Ciclo.webp" class="card-img-top">
-                <div class="card-header">
-                  por R$149,90
-                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Kit Presente Eudora Roxo Miniatura (2 itens)</h5>
-                  <p class="card-text">O presente perfeito para mulheres que amam se cuidar!</p>
-                  <p>O Kit EUDORA Indulgent é composto por um delicioso perfume e um hidratante corporal que deixam sua pele macia e perfumada.</p>
-                  <p>Aproveite essa combinação perfeita para presentear ou se presentear com o melhor da EUDORA!</p> 
-                    <p>Sua beleza merece o melhor!</p>
+            <p  class="highlight">APROVEITE ESSA NOVIDADE E GARANTE LOGO O SEU </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                  <div class="card">
+                    <img src="asts/Primeiro Destaque Do Ciclo.webp" class="card-img-top">
+                    <div class="card-header">Por R$149,90</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Kit Presente Eudora Roxo Miniatura (2 itens)</h5>
+                      <p class="card-text">O presente perfeito para mulheres que amam se cuidar!</p>
+                      <p>O Kit EUDORA Indulgent é composto por um delicioso perfume e um hidratante corporal que deixam sua pele macia e perfumada.</p>
+                      <p>Aproveite essa combinação perfeita para presentear ou se presentear com o melhor da EUDORA!</p>
+                      <p>Sua beleza merece o melhor!</p>
+                    </div>
+                    <div class="card-footer">
+                      <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="1" 
+                    data-product-name="Kit Presente Eudora Roxo Miniatura (2 itens)"
+                     data-product-price="149.90"
+                    data-product-image="asts/Primeiro Destaque Do Ciclo.webp">
+                    Adicionar ao Carrinho
+                      </button>
+                      <small class="text-success">Em estoque</small>
+                    </div>
+                  </div>
                 </div>
-                <div class="card-footer">
-                  <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                      Adicionar ao Carrinho
-                  </a>
-                  <small class="text-success">Em estoque</small>
-              </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <div class="card">
-                <img src="asts/Segundo Destaque Do Ciclo.webp" class="card-img-top">
-                <div class="card-header">
-                 Por R$134,97
-                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Kit Presente Siàge Cica-Therapy (3 itens)</h5>
-                  <p class="card-text">O presente perfeito para mulheres que amam se cuidar!</p>
-                  <p>O Kit EUDORA Indulgent é composto por um delicioso perfume e um hidratante corporal que deixam sua pele macia e perfumada.</p>
-                  <p>Aproveite essa combinação perfeita para presentear ou se presentear com o melhor da EUDORA!</p> 
-                    <p>Sua beleza merece o melhor!</p>
-                </div>
-                <div class="card-footer">
-                  <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                      Adicionar ao Carrinho
-                  </a>
-                  <small class="text-success"> Fora de estoque</small>
-              </div>
-              </div>
-            </div>
-        </main>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card">
+    <img src="asts/Segundo Destaque Do Ciclo.webp" class="card-img-top">
+    <div class="card-header">Por R$134,97</div>
+    <div class="card-body">
+      <h5 class="card-title">Kit Presente Siàge Cica-Therapy (3 itens)</h5>
+      <p class="card-text">O presente perfeito para mulheres que amam se cuidar!</p>
+      <p>O Kit EUDORA Indulgent é composto por um delicioso perfume e um hidratante corporal que deixam sua pele macia e perfumada.</p>
+      <p>Aproveite essa combinação perfeita para presentear ou se presentear com o melhor da EUDORA!</p>
+      <p>Sua beleza merece o melhor!</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="2" 
+        data-product-name="Kit Presente Siàge Cica-Therapy (3 itens)"
+        data-product-price="134.90" 
+        data-product-image="asts/8 Imagem De Produto Para Compra.webp">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-danger">Fora de estoque</small>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card -h100">
+    <img src="asts/Novidades-para-Carrossel.webp" class="card-img-top" alt="Kit Presente Natal Velvet Sensual">
+    <div class="card-header"><del>R$152.98</del> Por R$90.93</div>
+    <div class="card-body">
+      <h5 class="card-title">Kit Presente Natal Velvet Sensual</h5>
+      <p class="card-text">Desperte seus sentidos com Velvet Sensual.</p>
+      <p>Sinta a intensidade da fragrância oriental amadeirada e a suavidade da loção hidratante corporal.</p>
+      <p>Um kit completo para você se sentir ainda mais sensual em todas as ocasiões.</p>
+      <p>Presenteie-se com esse toque de sofisticação!</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="17" 
+        data-product-name="Kit Presente Natal Velvet Sensual"
+        data-product-price="90.93" 
+        data-product-image="asts\Novidades-para-Carrossel.webp">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-success">Em estoque</small>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card -h100">
+    <img src="asts/Novidades-Para-carrossel-2.webp" class="card-img-top"alt="Kit Eudora H- Perfume + loção hidratante 200ml">
+    <div class="card-header"><del>R$152.40</del> por R$90.23</div>
+    <div class="card-body">
+      <h5 class="card-title">Kit Eudora H- Perfume + loção hidratante 200ml</h5>
+      <p class="card-text">Desafie seus limites com Eudora H!</p>
+      <p>Uma fragrância marcante que combina perfeitamente com a força e a determinação do homem moderno.</p>
+      <p>O kit completo te proporciona uma experiência única de cuidado pessoal, com o desodorante colônia e a loção pós-barba.</p>
+      <p>Presenteie-se ou surpreenda quem você ama!</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="18" 
+        data-product-name="Kit Eudora H- Perfume + loção hidratante 200ml"
+        data-product-price="90.23" 
+        data-product-image="asts/Novidades-Para-carrossel-2.webp">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-success">Em estoque</small>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card -h100">
+    <img src="asts/Novidade-Para-Carrossel-3.jpg" class="card-img-top"alt="Presente Eudora Niina Secrets Palette Multifuncional Natal">
+    <div class="card-header"><del>R$206.49</del> por R$122.43</div>
+    <div class="card-body">
+      <h5 class="card-title">Presente Eudora Niina Secrets Palette Multifuncional Natal</h5>
+      <p class="card-text">Solte a sua criatividade com a paleta Eudora!</p>
+      <p>Desvende um mundo de possibilidades com essa paleta completa de sombras.</p>
+      <p>Cores intensas e pigmentadas para você criar maquiagens incríveis e arrasar por onde passar.</p>
+      <p>Um kit indispensável para todas as amantes de maquiagem!</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="19" 
+        data-product-name="Presente Eudora Niina Secrets Palette Multifuncional Natal"
+        data-product-price="122.43" 
+        data-product-image="asts/Novidade-Para-Carrossel-3.jpg">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-success">Em estoque</small>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card -h100">
+    <img src="asts/NovidadeParaCarrossel4.jpg" class="card-img-top" alt="Presente Eud Edp Rouge Deo Col + Loção">
+    <div class="card-header"><del>R$326.79</del> Por R$171,49</div>
+    <div class="card-body">
+      <h5 class="card-title">Presente Eud Edp Rouge Deo Col + Loção</h5>
+      <p class="card-text">Desperte a sua sensualidade com Eudora Rouge!</p>
+      <p>Uma fragrância oriental amadeirada que te envolve em um manto de mistério e sedução.</p>
+      <p>A loção corporal completa a experiência, deixando sua pele macia e perfumada por muito mais tempo.</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="20" 
+        data-product-name="Presente Eud Edp Rouge Deo Col + Loção"
+        data-product-price="171.49" 
+        data-product-image="asts\Novidade-Para-Carrossel-4.jpg">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-success">Em estoque</small>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card -h100">
+    <img src="asts/Novidade-Para-Carrossel-5.jpg" class="card-img-top" alt="Presente Eud Kids Sh+Cond+Col Era Uma Vez">
+    <div class="card-header">Por R$89.90</div>
+    <div class="card-body">
+      <h5 class="card-title">Presente Eud Kids Sh+Cond+Col Era Uma Vez</h5>
+      <p class="card-text">Solte a imaginação com Eudora Kids!</p>
+      <p>Cabelos macios, perfumados e prontos para qualquer aventura!</p>
+      <p>O kit Eudora Kids é perfeito para deixar a hora do banho ainda mais divertida.</p>
+      <p>Com fórmulas suaves e deliciosas fragrâncias, os pequenos vão adorar.</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="21" 
+        data-product-name="Presente Eud Kids Sh+Cond+Col Era Uma Vez"
+        data-product-price="89.90" 
+        data-product-image="asts/Novidade-Para-Carrossel-5.jpg">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-success">Em estoque</small>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+  <div class="card -h100">
+    <img src="asts/Novidade-Para-Carrossel-6.jpg" class="card-img-top"alt="Combo Sh+Cond Cica Therapy 400Ml">
+    <div class="card-header"><del>R$264.78</del> Por R$159.90</div>
+    <div class="card-body">
+      <h5 class="card-title">Kit Eudora Niina Secrets - Perfume + Loção Hidratante 200ml</h5>
+      <p class="card-text">O perfume e a loção hidratante que vão deixar sua pele irresistível!</p>
+      <p>A fragrância encantadora e a textura suave da loção hidratante vão te proporcionar momentos de prazer e cuidado.</p>
+      <p>Ideal para quem busca sofisticação e um toque de elegância o dia todo.</p>
+    </div>
+    <div class="card-footer">
+      <button 
+        class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+        data-product-id="22" 
+        data-product-name="Kit Eudora Niina Secrets - Perfume + Loção Hidratante 200ml"
+        data-product-price="159.90" 
+        data-product-image="asts/NovidadeParaCarrossel6.jpg">
+        Adicionar ao Carrinho
+      </button>
+      <small class="text-success">Em estoque</small>
+    </div>
+  </div>
+</div>
     </main>
     <footer class="footer bg-dark text-white mt-auto">
       <div class="container">
@@ -158,11 +307,22 @@
         </div>
       </div>
     </footer>
-  </div>
-  <!-- Optional JavaScript -->
-  <!-- Popper.js first, then Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="Script.JS"></script>
+  </div>    
+  <script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"
+></script>    
+<script   
+src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js/dist/autoComplete.min.js"> 
+</script> 
+<script src="funcionalidade-carrinho-de-compras.js"></script>
+<script src="script.js"></script>
+<script src="Dados.JS"></script>
 </body>
 </html>

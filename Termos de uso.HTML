@@ -22,34 +22,34 @@ body {
 }
 </style>
 <body>
-  <div class="d-flex flex-column wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+  <div class="d-flex flex-column wrapper min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
-        <button class="navbar-toggler" type="button" onclick="toggleMenu()">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <!-- Espaço vazio para manter o alinhamento -->
-          </ul>
-          <div class="d-flex">
-            <div class="search me-3">
-              <input type="text" placeholder="O que você está...">
-              <div class="list"></div>
-              <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"></ul>
+          <div class="d-flex align-items-center ms-auto">
+            <div class="search-container me-2">
+              <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="O que vc Procura?" id="campo-pesquisa">
+                <button class="btn btn-primary" onclick="pesquisar()">Pesquisar</button>
+              </div>
             </div>
-            <div class="nav-item">
-              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
-                  title="5 produto(s) no carrinho"><small>5</small></span>
-              <a href="/carrinho.html" class="nav-link text-white">
-                  <i class="bi bi-cart" style="font-size:24px;"></i>
+            <div class="nav-item position-relative">
+              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0" title="5 produto(s) no carrinho">
+                <small>5</small>
+              </span>
+              <a href="Carrinho.HTML" class="nav-link text-white">
+                <i class="bi bi-cart" style="font-size:24px;"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
     </nav>
+    <main class="flex-fill">
+      <section class="resultados-pesquisa mt-3" id="resultados-pesquisa"></section> 
+    </main>
     <main class="flex-fill">
       <div class="container">
         <h2> Termos de uso:</h2>

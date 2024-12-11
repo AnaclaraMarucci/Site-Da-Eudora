@@ -13,45 +13,37 @@
   <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
   <title> Promoção</title>
 </head>
-<style>
-  .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  min-height: 400px;
-  max-height: 400%;
-  }
-</style>
-<body>
-  <div class="d-flex flex-column wrapper min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm mb-3">
+<div class="d-flex flex-column wrapper min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="/" style="color: white;"><b>Representante Eudora</b></a>
-        <button class="navbar-toggler" type="button" onclick="toggleMenu()">
-          <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <!-- Espaço vazio para manter o alinhamento -->
-          </ul>
-          <div class="d-flex">
-            <input type="text" id="searchInput" placeholder="O que vc procura?.">
-            <div id="autocomplete-results"></div>
-            <button class="btn btn-link text-white">
-              <i class="bi bi-search" style="font-size: 1rem;"></i> 
-            </button>              
-            <div class="nav-item">
-              <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
-                  title="5 produto(s) no carrinho"><small>5</small></span>
-              <a href="/carrinho.html" class="nav-link text-white">
-                  <i class="bi bi-cart" style="font-size:24px;"></i>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"></ul>
+          <div class="d-flex align-items-center ms-auto">
+            <div class="search-container me-2">
+              <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="O que vc Procura?" id="campo-pesquisa">
+                <button class="btn btn-primary" onclick='pesquisar()'>Pesquisar</button> 
+            <div class="nav-item position-relative">  
+              <ul id="lista-carrinho" class="list-group"></ul>  
+        <div id="total-price" class="mt-3 fw-bold"></div>
+  </ul> 
+              <span id="cart-count" class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0" title="produtos no carrinho">
+                <small>0</small>
+              </span>
+              <a href="Carrinho.HTML" class="nav-link text-white">
+                <i class="bi bi-cart" style="font-size:24px;"></i>  
               </a>
-            </div>
+            </div>  
           </div>
-        </div>
-      </div>
+        </div>  
+      </div>  
     </nav>
+    <main class="flex-fill">  
+      <ul class="list-group mb-3" id="lista-carrinho">
+      </ul>
+      <section class="resultados-pesquisa mt-3" id="resultados-pesquisa"></section>   
+    </main>
     <div class="menu-overlay"></div>
     <a href="#" class="menu-open">Menu</a>
     <div class="side-menu-wrapper">
@@ -77,192 +69,206 @@
       <audio src="asts/Audio de musica Intrumental.mp3" controls>Som</audio>
         <p class="highlight">Fique ligado temos algumas promoções para vocês:</p>
         <main class="flex-fill">
-            <div class="container-fluid">
-              <div class="row g-3">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção 1 (2).webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>De R$137,97</del>
-                            <p>por</p>
-                            <p>R$125,65 8x de R$15,75</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Combo combate o Frizz: Shampoo 250ml + Condicionador 200ml + Leave In 100ml</h5>
-                            <p class="card-text">Combata o frizz com a linha Siage e diga adeus aos cabelos arrepiados!</p>
-                            <p>Experimente o Shampoo, Condicionador e Creme de Pentear Defrizante Siage e deixe seus cabelos lisos e disciplinados por até 72 horas</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu Kit Siage Combate o Frizz!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Em estoque</small>
-                        </div>
-                    </div>
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100">
+                <img src="asts/Produto Em Promoção 1 (2).webp" class="card-img-top" alt="Combo combate o Frizz">
+                <div class="card-header"><Del>R$137.97</Del>por R$125.65 (8x de R$15.75)</div>
+                <div class="card-body">
+                  <h5 class="card-title">Combo combate o Frizz</h5>
+                  <p class="card-text">Shampoo 250ml + Condicionador 200ml + Leave In 100ml.</p>
+                  <p>Combate o frizz com a linha Siage e diga adeus aos cabelos arrepiados!</p>
+                  <p>Adquira agora e transforme seus cabelos com Siage!</p>
+                  <p>Sua beleza merece o melhor!</p>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção2.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>De R$92,98</del>
-                            <p>por</p>
-                            <p>R$79,96 5x de 15,99</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Combo regeneração pós-química Shampoo 250ml + Condicionador 200ml</h5>
-                            <p class="card-text">Repare os danos causados por químicas com a linha Siage Regeneração Pós Química!</p>
-                            <p>Experimente o Shampoo e Condicionador Siage e repare profundamente seus cabelos com a qualidade e tecnologia que você merece!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu Kit Siage Regeneração Pós Química!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Em estoque</small>
-                        </div>
-                    </div>
+                <div class="card-footer">
+                  <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="9" 
+                    data-product-name="Combo combate o Frizz"
+                    data-product-price="125.65" 
+                    data-product-image="asts/Produto Em Promoção 1 (2).webp">
+                    Adicionar ao Carrinho
+                  </button>
+                  <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+                  <small class="text-success">Em estoque</small>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promação 3.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>R$75,98</del>
-                            <p>por</p>
-                            <p>R$49,99 3x de R$16,66</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Chic: Colônia Desodorante Chérie 95ml</h5>
-                            <p class="card-text">Desperte sua elegância com um toque de sofisticação!</p>
-                            <p>Experimente o perfume Chic Cherie da Eudora e realce sua beleza com uma fragrância marcante e irresistível!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu perfume Chic Cherie!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção 4.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>R$199,95</del>
-                            <p>por</p>
-                            <p>R$161,95 10x de R$16,20</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Club 6: Desodorante Colônia 96ml</h5>
-                            <p class="card-text">Experimente o perfume Club 6 da Eudora e realce sua beleza com uma fragrância marcante e irresistível!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu perfume Club 6!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção 5.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>De R$100,97</del>
-                            <p>por</p>
-                            <p>R$94,97 6x de R$15,83</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Combo Soul: Lapiseira Retrátil 350mg + Delineador Líquido Preto 2,5ml + Lápis para sobrancelha Médio Escuro 1,1g</h5>
-                            <p class="card-text">Olhos de diva, com um toque de sofisticação!</p>
-                            <p>Experimente o kit Soul Kiss da Eudora e realce sua beleza com um olhar marcante e irresistível!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu Kit Soul Kiss!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Fora de estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção 6.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>De R$101,98</del>
-                            <p>por</p>
-                            <p>R$74,99 5x de R$15,00</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Kit Skin Perfection Pó Solto + Primer Matte + Bruma Fixadora</h5>
-                            <p class="card-text">Pele perfeita, radiante e impecável!</p>
-                            <p>Experimente a linha Siage Cauterização dos Lisos e renove seus cabelos com a qualidade e tecnologia que você merece!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu Kit Skin Perfection!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Em estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção 7.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>De R$209,90</del>
-                            <p>por</p>
-                            <p>R$174,90 10x de R$17,49</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Combo Instance Lima Rosa: Loção Corporal 400ml + Gelato Hidratante Desodorante Corporal 200g</h5>
-                            <p class="card-text">Hidratação e fragrância que te levam para um paraíso tropical!</p>
-                            <p>Experimente a linha Instance Lima Rosa da Eudora e sinta a fragrância fresca e deliciosa da fruta, com a hidratação que sua pele precisa!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu Kit Instance Lima Rosa!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Fora de estoque</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img src="asts/Produto Em Promoção 8.webp" class="card-img-top">
-                        <div class="card-header">
-                            <del>De R$125,97</del>
-                            <p>por</p>
-                            <p>R$120,97 8x de R$15,12</p>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Combo Gel de Limpeza Neo Dermo 150g + Loção Corporal 150ml + Blush Líquido 15ml</h5>
-                            <p class="card-text">Pele radiante, macia e protegida!</p>
-                            <p>Experimente o Kit Neo Dermo Purific da Eudora e cuide da sua pele com produtos dermatologicamente testados!</p>
-                            <p>Aproveite esta oportunidade e adquira já o seu Kit Neo Dermo Purific!</p>
-                            <p>Sua beleza merece o melhor!</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="carrinho.html" class="btn btn-danger mt-2 d-block">
-                                Adicionar ao Carrinho
-                            </a>
-                            <small class="text-success">Fora de estoque</small>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100">
+                <img src="asts/Produto Em Promoção2.webp" class="card-img-top" alt="Combo Regeneração Pós-Química">
+                <div class="card-header"><del>R$92.98</del>por R$79.96 (5x de R$15.99)</div>
+                <div class="card-body">
+                  <h5 class="card-title">Combo Regeneração Pós-Química</h5>
+                  <p class="card-text">Shampoo 250ml + Condicionador 200ml.</p>
+                  <p>Renove seus fios com o poder do tratamento pós-química e recupere a força e brilho dos seus cabelos!</p>
+                  <p>Aproveite agora mesmo esta oferta!</p>
+                  <p>Sua beleza merece o melhor!</p>
+                </div>
+                <div class="card-footer">
+                  <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="10" 
+                    data-product-name="Combo Regeneração Pós-Química"
+                    data-product-price="79.96"   
+                    data-product-image="asts/Produto Em Promoção2.webp">
+                    Adicionar ao Carrinho
+                  </button>
+                  <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+                  <small class="text-danger">Fora de estoque</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100">
+                <img src="asts/Produto Em Promação 3.webp" class="card-img-top" alt="Chic: Colônia Desodorante Chérie 95ml">
+                <div class="card-header"><del>R$75.98</del>por R$149.90 (10x de R$14.99)</div>
+                <div class="card-body">
+                  <h5 class="card-title">Chic: Colônia Desodorante Chérie 95ml</h5>
+                  <p class="card-text">Desperte sua elegância com um toque de sofisticação!</p>
+                  <p>Experimente o perfume Chic Chérie da Eudora e realce sua beleza com uma fragrância marcante e irresistível!</p>
+                  <p>Aproveite esta oportunidade e adquira já o seu perfume Chic Chérie!</p>
+                  <p>Sua beleza merece o melhor!</p>
+                </div>
+                <div class="card-footer">
+                  <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="11" 
+                    data-product-name="Chic: Colônia Desodorante Chérie 95ml"
+                    data-product-price="149.90" 
+                    data-product-image="asts/Produto Em Promoção3.webp">
+                    Adicionar ao Carrinho
+                  </button>
+                  <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+                  <small class="text-success">Em estoque</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100">
+                <img src="asts/Produto Em Promoção 4.webp" class="card-img-top" alt="Club 6: Desodorante Colônia 96ml">
+                <div class="card-header"><Del>R$199.95</Del> por R$161.95 (12x de R$15.99)</div>
+                <div class="card-body">
+                  <h5 class="card-title">Club 6: Desodorante Colônia 96ml</h5>
+                  <p class="card-text">Experimente o perfume Club 6 da Eudora e realce sua beleza com uma fragrância marcante e irresistível!</p>
+                  <p>Aproveite esta oportunidade e adquira já o seu perfume Club 6!</p
+                  <p>Sua beleza merece o melhor!</p>
+                </div>
+                <div class="card-footer">
+                  <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="12" 
+                    data-product-name="Club 6: Desodorante Colônia 96ml"
+                    data-product-price="161.95"
+                    data-product-image="asts/Produto Em Promoção 4.webp">
+                    Adicionar ao Carrinho
+                  </button>
+                  <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+                  <small class="text-success">Em estoque</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100">
+                <img src="asts/Produto Em Promoção 5.webp" class="card-img-top" alt="Combo Soul: Lapiseira Retrátil 350mg + Delineador Líquido Preto 2,5ml + Lápis para Sobrancelha Médio Escuro 1,1gs">
+                <div class="card-header"><del>$100.97 </del> por R$94.97 (8x de R$15.37)</div>
+                <div class="card-body">
+                  <h5 class="card-title">Combo Soul: Lapiseira Retrátil 350mg + Delineador Líquido Preto 2,5ml + Lápis para Sobrancelha Médio Escuro 1,1g</h5>
+                  <p class="card-text">Olhos de diva, com um toque de sofisticação!</p>
+                  <p>Experimente o kit Soul Kiss da Eudora e realce sua beleza com um olhar marcante e irresistível!</p>
+                  <p>Aproveite esta oportunidade e adquira já o seu Kit Soul Kiss!</p>
+                  <p>Sua beleza merece o melhor!</p>
+                </div>
+                <div class="card-footer">
+                  <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="13" 
+                    data-product-name="Combo Soul: Lapiseira Retrátil 350mg + Delineador Líquido Preto 2,5ml + Lápis para Sobrancelha Médio Escuro 1,1g"
+                    data-product-price="94.97" 
+                    data-product-image="asts/Produto Em Promoção 5.webp">
+                    Adicionar ao Carrinho
+                  </button>
+                  <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+                  <small class="text-danger">Fora de estoque</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="card h-100">
+                <img src="asts/Produto Em Promoção 6.webp" class="card-img-top" alt= "Kit Skin Perfection: Pó Solto + Primer Matte + Bruma Fixadora">
+                <div class="card-header"><del>R$101.98</del> por R$74.99 (8x de R$16.75)</div>
+                <div class="card-body">
+                  <h5 class="card-title">Kit Skin Perfection: Pó Solto + Primer Matte + Bruma Fixadora</h5>
+                  <p class="card-text">Pele perfeita, radiante e impecável!</p>
+                  <p>Experimente a linha Siage Skin Perfection e renove sua rotina de cuidados com produtos de alta qualidade e tecnologia que sua pele merece!</p>
+                  <p>Aproveite esta oportunidade e adquira já o seu Kit Skin Perfection!</p>
+                  <p>Sua beleza merece o melhor!</p>
+                </div>
+                <div class="card-footer">
+                  <button 
+                    class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+                    data-product-id="14" 
+                    data-product-name="Kit Skin Perfection: Pó Solto + Primer Matte + Bruma Fixadora"
+                    data-product-price="R$74.99"   
+                    data-product-image="asts/Produto Em Promoção 6.webp">
+                    Adicionar ao Carrinho
+                  </button>
+                  <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+                  <small class="text-success">Em estoque</small>
+                </div>
+              </div>
+            </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card h-100">
+      <img src="asts/Produto Em Promoção 7.webp" class="card-img-top" alt="Combo Instance Lima Rosa: Loção Corporal 400ml + Gelato Hidratante Desodorante Corporal 200g">
+      <div class="card-header"> <del>$209.90</del>  por R$152.90 (10x de R$15.29)</div>
+      <div class="card-body">
+        <h5 class="card-title">Combo Instance Lima Rosa: Loção Corporal 400ml + Gelato Hidratante Desodorante Corporal 200g</h5>
+        <p class="card-text">Hidratação e fragrância que te levam para um paraíso tropical!</p>
+        <p>Experimente a linha Instance Lima Rosa da Eudora e sinta a fragrância fresca e deliciosa da fruta, com a hidratação que sua pele precisa!</p>
+        <p>Aproveite esta oportunidade e adquira já o seu Kit Instance Lima Rosa!</p>
+        <p>Sua beleza merece o melhor!</p>
+      </div>
+      <div class="card-footer">
+        <button 
+          class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+          data-product-id="15" 
+          data-product-name="Combo Instance Lima Rosa: Loção Corporal 400ml + Gelato Hidratante Desodorante Corporal 200g"
+          data-product-price="174.90"  
+          data-product-image="asts/Produto Em Promoção 7.webp">
+          Adicionar ao Carrinho
+        </button>
+        <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+        <small class="text-success">Em estoque</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="card h-100">
+      <img src="asts/Produtos em Promoção 8.jpg" class="card-img-top" alt="Combo Gel de Limpeza Neo Dermo 150g + Loção Corporal 150ml + Blush Líquido 15ml">
+      <div class="card-header"><del>R$125.97</del> por R$125.97 (5x de R$14.00)</div>
+      <div class="card-body">
+        <h5 class="card-title">Combo Gel de Limpeza Neo Dermo 150g + Loção Corporal 150ml + Blush Líquido 15ml</h5>
+        <p class="card-text">Creme Antifúngico 100g + Sabonete Líquido Antisséptico 200ml</p>
+        <p>Combate bactérias e fungos, garantindo um cuidado completo para a sua pele!</p>
+        <p>Com ação rápida e eficaz, sua pele ficará limpa e protegida!</p>
+        <p>Sua beleza merece o melhor!</p>
+      </div>
+      <div class="card-footer">
+        <button 
+          class="btn btn-danger btn-adicionar-carrinho mt-2 d-block" 
+          data-product-id="16" 
+          data-product-name="Combo Gel de Limpeza Neo Dermo 150g + Loção Corporal 150ml + Blush Líquido 15ml"
+          data-product-price="120,.97"  
+          data-product-image="asts/Produtos em Promoção 8.jpg">
+          Adicionar ao Carrinho
+        </button>
+        <a href="#" class="btn btn-secondary btn-ver-produto mt-2 d-block">Ver Produto</a>
+        <small class="text-success">Em estoque</small>
+      </div>
+    </div>
+  </div>  
     </main>
     <footer class="footer bg-dark text-white mt-auto">
       <div class="container">
@@ -283,10 +289,21 @@
       </div>
     </footer>
   </div>
-  <!-- Optional JavaScript -->
-  <!-- Popper.js first, then Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="Script.JS"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+  crossorigin="anonymous"
+></script>    
+<script   
+src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js/dist/autoComplete.min.js"> 
+</script> 
+<script src="Dados.JS"></script>
+<script src="script.js"></script>
+<script src="funcionalidade-carrinho-de-compras.js"></script>
 </body>
 </html>
