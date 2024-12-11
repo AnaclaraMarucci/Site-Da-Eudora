@@ -438,4 +438,9 @@ section input {
     font-size: 0.9rem;
   }
 }
+.search-container {
+  display: block !important; /* Força a exibição */
+  width: 100%; /* Ocupa toda a largura disponível */
+  margin-top: 10px;
+} 
 
