@@ -203,7 +203,7 @@ let products= [
 {   
   id:"21",
   name: "Presente Eud Kids Sh+Cond+Col Era Uma Vez",
-  description: "Solte a imaginação com Eudora Kids!Cabelos macios, perfumados e prontos para qualquer aventura!O kit Eudora Kids é perfeito para deixar a hora do banho ainda mais divertida.Com fórmulas suaves e deliciosas fragrâncias, os pequenos vão adorar.",
+  description: "Solte a imaginação com Eudora Kids!Cabelos macios, perfumados e prontos para qualquer aventura!O kit Eudora Kids é perfeito para deixar a hora do banho ainda mais divertidaCom fórmulas suaves e deliciosas fragrâncias, os pequenos vão adorar.",
   image: "asts/Novidade-Para-Carrossel-5.jpg",
   priceOld: " R$125.97",
   priceCurrent: "R$89.90",
