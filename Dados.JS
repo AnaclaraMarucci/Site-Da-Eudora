@@ -220,6 +220,26 @@ let Dados = [
   priceCurrent: "R$159.90",
   installments: "",  
    stockStatus: 'Em estoque'
+},  
+{   
+  id:"23",
+  name: "Kit Presente Eudora Roxo Miniatura (2 itens)",
+  description: "O presente perfeito para mulheres que amam se cuidar!O Kit EUDORA Indulgent é composto por um delicioso perfume e um hidratante corporal que deixam sua pele macia e perfumada.Aproveite essa combinação perfeita para presentear ou se presentear com o melhor da EUDORA!Sua beleza merece o melhor!",
+  image: "asts/Primeiro Destaque Do Ciclo.webp",
+  priceOld: "",
+  priceCurrent: "R$149.90",
+  installments: "",  
+   stockStatus: 'Em estoque'
+},  
+{   
+  id:"24",
+  name: "Kit Presente Siàge Cica-Therapy (3 itens)",
+  description: "O presente perfeito para mulheres que amam se cuidar!O Kit EUDORA Indulgent é composto por um delicioso perfume e um hidratante corporal que deixam sua pele macia e perfumada.Aproveite essa combinação perfeita para presentear ou se presentear com o melhor da EUDORA!Sua beleza merece o melhor!",
+  image: "asts/Segundo Destaque Do Ciclo.webp",
+  priceOld: " ",
+  priceCurrent: "R$134,97",
+  installments: "",  
+   stockStatus: 'Em estoque'
 }
     ]; 
 

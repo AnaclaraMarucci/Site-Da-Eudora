@@ -227,7 +227,6 @@ let cart = [];
 function addToCart(event) {
     // Verificar se o evento foi disparado por um botão com a classe "btn-adicionar-carrinho"
     if (!event.target.classList.contains('btn-adicionar-carrinho')) return;
-
     const button = event.target;
     const productId = button.getAttribute('data-product-id');
     const productName = button.getAttribute('data-product-name');

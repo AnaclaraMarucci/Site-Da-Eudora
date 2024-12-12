@@ -22,11 +22,15 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0"></ul>
         <div class="d-flex align-items-center ms-auto">
           <div class="search-container me-2">
-            <div class="input-group input-group-sm">
-              <input type="text" class="form-control" placeholder="O que vc Procura?" id="campo-pesquisa">
-              <button class="btn btn-primary" onclick="pesquisar()">Pesquisar</button>
-            </div>  
-          <div class="nav-item position-relative">
+            <main>
+              <section class="d-flex align-items-center justify-content-between flex-wrap">
+                  <div class="input-group input-group-sm col-12 col-md-6 mb-3">
+                      <input 
+                          type="text"class="form-control"placeholder="O que vc Procura?"id="campo-pesquisa"><button 
+                          class="btn btn-primary" 
+                          onclick="pesquisarProduto()">Pesquisar</button> 
+                          <div class="nav-item position-relative">
+                          <div class="nav-item position-relative">  
             <span id="cart-count" class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0" title="produtos no carrinho">
               <small>0</small>
             </span>

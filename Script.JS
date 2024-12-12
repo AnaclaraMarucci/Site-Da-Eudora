@@ -277,7 +277,7 @@ function pesquisar() {
                  Nada foi encontrado. Você precisa digitar o nome de um produto ou uma palavra-chave.
              </div>`;
          return;
-     }
+     }  
  
      // Inicializa os resultados
      let resultados = "";
